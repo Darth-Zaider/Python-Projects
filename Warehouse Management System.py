@@ -21,7 +21,6 @@
 # Capacity: Ensure warehouse capacity isn’t exceeded.
 # Binary Constraints: Warehouses are either operational or not.
 
-# In[2]:
 
 
 import pulp
