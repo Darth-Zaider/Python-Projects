@@ -1,6 +1,7 @@
 # # Warehouse Optimization system
 
-# This warehouse optimization system is based on a linear programming model that solves the warehouse location problem with transportation costs, fixed costs, warehouse capacities, and customer demands. Utilizing the pulp library for Python it minimizes the total cost of transportation and fixed warehouse costs while satisfying certain constraints: A warehouse cannot deliver more goods than its capacity and each customer's demand must be satisfied.
+# This warehouse optimization system is based on a linear programming model that solves the warehouse location problem with transportation costs, fixed costs, warehouse capacities, and customer demands. 
+# Utilizing the pulp library for Python it minimizes the total cost of transportation and fixed warehouse costs while satisfying certain constraints: A warehouse cannot deliver more goods than its capacity and each customer's demand must be satisfied.
 
 # # Model overview
 # Decision Variables:
@@ -63,4 +64,7 @@ for var in model.variables():
     print(f"{var.name} = {var.varValue}")
 
 
-# From the output we can see that the result is an optimal configuration with a total cost of 50650.0 currency units. the 'Transport' output indicates customer(0) receives 300.0 units of goods from warehouse(2), customer(1) receives 400.0 units of goods from warehouse(1), and customer(2) receives 200.0 units of goods from warehouse(0) and 300.0 units of goods from warehouse(2). This result satifies both the demand and capacity constraints. The 'Warehouse' output indicates which warehouses need to  be operational for the model to work, and shows that Warehouse(3) is not necessary / could be closed.
+# From the output we can see that the result is an optimal configuration with a total cost of 50650.0 currency units. 
+# the 'Transport' output indicates customer(0) receives 300.0 units of goods from warehouse(2), customer(1) receives 400.0 units of goods from warehouse(1), and customer(2) receives 200.0 units of goods from warehouse(0) and 300.0 units of goods from warehouse(2). 
+# This result satifies both the demand and capacity constraints. 
+# The 'Warehouse' output indicates which warehouses need to  be operational for the model to work, and shows that Warehouse(3) is not necessary / could be closed.
